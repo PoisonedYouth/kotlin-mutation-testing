@@ -13,7 +13,7 @@ repositories {
 }
 
 pitest {
-    setProperty("junit5PluginVersion", "0.12")
+    setProperty("junit5PluginVersion", "0.15")
     setProperty("testPlugin", "junit5")
     setProperty("targetClasses", listOf("com.poisonedyouth.*"))
     setProperty("outputFormats", listOf("HTML"))
@@ -21,7 +21,9 @@ pitest {
 }
 
 dependencies {
-    testImplementation(kotlin("test"))
+    testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.1")
+    testImplementation("org.junit.jupiter:junit-jupiter-engine:5.9.1")
+    testImplementation("org.assertj:assertj-core:3.23.1")
 }
 
 tasks.test {
