@@ -18,6 +18,7 @@ pitest {
     setProperty("targetClasses", listOf("com.poisonedyouth.*"))
     setProperty("outputFormats", listOf("HTML"))
     setProperty("failWhenNoMutations", false)
+    setProperty("mutators", listOf("ALL"))
 }
 
 dependencies {
